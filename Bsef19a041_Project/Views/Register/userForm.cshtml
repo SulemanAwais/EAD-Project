@@ -1,0 +1,67 @@
+﻿@using Bsef19a041_Project.Models
+@model User
+@{
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+<style>
+    body{
+        background-color:black;
+    }
+    #logo{
+        height:60%;
+        width:60%
+    }
+    #main{
+        display:flex;
+        background-color:darkgray;
+        margin-top:20px;
+        margin-bottom:20px;
+        text-align:center;
+        width:auto;
+        margin-right:40px;
+        margin-left:40px;
+        border-radius:15px;
+    }
+    .field-validation-error{
+        color:orangered;
+
+}
+.input-validation-error
+{
+    border:1px solid orangered
+}
+</style>
+<div id="main">
+    <div class="text-center">
+      <img src="~/css/logoPNG.png" class="rounded" alt="..." id="logo">
+      <h3 style="color:orangered">Bawwrgers Lab</h3>
+    </div>
+    <form method="post" action="/Register/userForm" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly"> </div>
+        <p>Select Profile Picture</p>
+        <input type="file" name="PostedFiles"multiple />
+        <input type="submit" value="Upload" />
+        <div class="mb-3">
+            <br />
+          <label for="exampleFormControlInput1" class="form-label">First Name:</label>
+          <input type="text" class="form-control" asp-for="FirstName" id="exampleFormControlInput1" placeholder="Bill">
+          <span asp-validation-for="FirstName">
+          </span>
+        </div><div class="mb-3">
+          <label for="exampleFormControlInput1"  class="form-label">Last Name:</label>
+          <input type="text" class="form-control" asp-for="LastName" id="exampleFormControlInput1" placeholder="Gates">
+          <span asp-validation-for="LastName"></span>
+        </div><div class="mb-3">
+          <label for="exampleFormControlInput1"  class="form-label">Email address:</label>
+          <input type="email" class="form-control" asp-for="Email" id="exampleFormControlInput1" placeholder="name@example.com">
+                    <span asp-validation-for="Email"></span>
+
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1"  class="form-label">Password:</label>
+          <input type="text" class="form-control" asp-for="Password" id="exampleFormControlInput1" placeholder="123456789">
+          <span asp-validation-for="Password"></span>
+        </div>
+        <input type="submit" class="btn btn-dark" value="Create Account">
+    </form>
+</div>

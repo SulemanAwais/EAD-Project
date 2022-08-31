@@ -1,0 +1,96 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Bsef19a041_Project
+build_property.RootNamespace = Bsef19a041_Project
+build_property.ProjectDir = E:\Pucit\6th Semester\Enterprise Application Development\Bsef19a041_Project\Bsef19a041_Project\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\Pucit\6th Semester\Enterprise Application Development\Bsef19a041_Project\Bsef19a041_Project
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Menu/Deals.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxEZWFscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Menu/EverydayValue.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxFdmVyeWRheVZhbHVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Menu/RiceNSpice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxSaWNlTlNwaWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Menu/Wraps.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxXcmFwcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Register/ListUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcTGlzdFVzZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Register/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Register/userForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcdXNlckZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Register/Welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcV2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Shared/Components/Deals/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRGVhbHNcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Shared/Components/DiscountOffers/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRGlzY291bnRPZmZlcnNcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Shared/Components/menuCard/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcbWVudUNhcmRcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Shared/Components/RnS/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUm5TXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Shared/Components/WrapsMenu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcV3JhcHNNZW51XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Shared/_addToCartPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9hZGRUb0NhcnRQYXJ0aWFsVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Shared/_layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9sYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Shared/_navOptionsPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9uYXZPcHRpb25zUGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Welcome/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VsY29tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/_viewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX3ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

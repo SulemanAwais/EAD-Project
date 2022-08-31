@@ -1,0 +1,83 @@
+﻿@using Bsef19a041_Project.Models
+@model userLogin
+ @{
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+<script type="text/javascript">
+    function submitUser() {
+        var data = {
+            Email: $("#email").val(),
+            Password: $("#password").val(),
+        }
+        console.log(data);
+        $.ajax({
+            type: 'POST',
+            url: '/Register/Login',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(data),
+            success: function (result) {
+                alert('Successfully received Data ');
+                console.log(result);
+            },
+            error: function () {
+                alert('Failed to receive the Data');
+                console.log('Failed ');
+            }
+        })
+    }
+</script>
+<style>
+    body{
+        background-color:black;
+    }
+    #logo{
+        height:60%;
+        width:60%
+    }
+    #main{
+        display:flex;
+        background-color:darkgray;
+        margin-top:20px;
+        margin-bottom:20px;
+        text-align:center;
+        width:80%;
+        margin-left:10%;
+        border-radius:15px;
+    }
+    .field-validation-error{
+        color:orangered;
+
+}
+.input-validation-error
+{
+    border:1px solid orangered
+}
+</style>
+<div @*id="main"*@>
+
+<div class="row">
+        <div class="col-md-4">
+            <form id="studenteForm" novalidate action="/Register/Login" method="post" class="needs-validation">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label" for="email" style="color:orangered"></label>
+                    <input asp-for="Email"  id="email"/>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label" style="color:orangered" for="password"></label>
+                    <input asp-for="Password"  id="password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-dark"  onclick="submitUser()">Login </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,91 @@
+﻿<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<html>
+    <body>
+        @*@await RenderSectionAsync("Scripts", required: false)*@
+
+        <nav class="navbar navbar-light bg-black">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="~/css/logo.svg" alt="" width="90" height="72" class="d-inline-block align-text-center"> 
+            </a>
+            <h3 style="color:orangered">
+              Bawwrgers Lab
+              <small class="text-muted">The house of flavours</small>
+            </h3>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              @RenderSection("Options",required:false)
+            </div>
+          </div>
+        </nav>
+        <div>
+            @RenderBody()
+        </div>
+        <footer class="bg-dark text-center text-white " style="margin-top:100px">
+      <br />
+      <div class="rounded-circle bg-black shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto" style="width: 150px; height: 150px;">
+            <img src="~/css/logoPNG.png" height="70" alt=""
+                 loading="lazy" />
+      </div>
+      
+  <div class="container p-4 pb-0">
+    <section class="mb-4">
+      <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.facebook.com/" role="button">
+          <i class="fa fa-facebook"></i></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.instagram.com/east.yt/" role="button"
+        ><i class="fa fa-instagram"></i
+      >
+      </a>
+      <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.google.com/" role="button">
+          <i class="fa fa-google"></i></a><a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.youtube.com/channel/UCeQnvFkR8_1irk-sr2DcbMg" role="button">
+          <i class="fa fa-youtube"></i></a>
+          <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://twitter.com/i/flow/login" role="button">
+          <i class="fa fa-twitter"></i></a>
+
+    </section>
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="#">Bawwrgers Lab.com</a>
+  </div>
+</footer>
+      @*  <div navbar fixed-bottom>
+
+        </div>
+<div class="container my-5">
+  <footer class="bg-dark text-center text-white ">
+      <br />
+      <div class="rounded-circle bg-black shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto" style="width: 150px; height: 150px;">
+            <img src="~/css/logoPNG.png" height="70" alt=""
+                 loading="lazy" />
+      </div>
+      
+  <div class="container p-4 pb-0">
+    <section class="mb-4">
+      <a class="btn btn-outline-light btn-floating m-1" href="#" role="button">
+          <i class="fab fa-facebook-f"></i></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"
+        ><i class="fab fa-instagram"></i
+      >
+      </a>
+
+    </section>
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="#">Bawwrgers Lab.com</a>
+  </div>
+</footer>
+  
+</div>*@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    </body>
+</html>

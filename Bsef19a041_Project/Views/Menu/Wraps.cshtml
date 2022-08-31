@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+@section Options{
+    <partial name="_addToCartPartialView" />
+}
+<style>
+     #line{
+        border-top:2px solid white;
+        background-color:orangered;
+        margin-left:35px;
+        margin-right:35px;
+    }
+    body{
+        background-color:black;
+        text-align:center;
+    }
+</style>
+    <div>
+    <p class="h1" style="color:white">Wraps</p>
+
+        <hr style='display:inline-block;'id="Line" />
+    </div>
+<vc:wraps-menu></vc:wraps-menu>

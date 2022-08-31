@@ -1,0 +1,29 @@
+﻿@model List<Bsef19a041_Project.Models.User>
+@{
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+<style>
+    body{
+        background-color:black;
+    }
+</style>
+<div class="container mt-3">
+  <h2></h2>
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+        @foreach (Bsef19a041_Project.Models.User u in Model)
+        {
+            <tr>
+                <td> @u.FirstName @u.LastName</td>
+                <td>@u.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

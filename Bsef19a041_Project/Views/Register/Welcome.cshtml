@@ -1,0 +1,130 @@
+﻿@model Bsef19a041_Project.Models.User
+@{
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+@section Options{
+    <partial name="_addToCartPartialView" />
+}
+<style>
+    .img-fluid{
+        margin-top:50px;
+        margin-bottom:50px;
+    }
+        body{
+            text-align: center;
+            font-family: 'open sans';
+            background-color: black;
+        }
+        #userName{
+            color:orangered;
+        }
+        h1{
+            color:gray;
+        }
+        #c1{
+            background-color: orangered;
+         margin-left:15px;    
+        }
+        #menu{
+            margin-left:40px;
+        }
+        h4 {
+            display: flex;
+            flex-direction: row;
+            color:orangered;
+             margin-left:35px;
+        margin-right:35px;
+        }
+        h4:before,
+        h4:after {
+           
+            content: "";
+            flex: 1 1;
+            border-bottom: 2px solid white;
+            margin: auto;
+        }
+       
+</style>
+
+<div>
+    <hr style="color:white"/>
+<h1>
+        Hello 
+    </h1>
+    <h1 id="userName">
+        @Model.FirstName @Model.LastName 
+    </h1>
+    <h1>
+        Welcome to Our App
+    </h1>
+    <div>
+        <h4>&nbsp;Our Products&nbsp;</h4>
+        <br />
+    </div>
+    <div class="row row-cols-1 row-cols-md-5 g-4" id="menu">
+    <div class="card" style="width: 18rem;" id="c1">
+        <img src="~/css/b1 (7).png" class="card-img-top" alt="...">
+        <div class="card-body" >
+        <a asp-controller="Menu" asp-action="EverydayValue" class="btn btn-dark">Everyday Value</a>
+    </div>
+</div>
+<div class="card" style="width: 18rem;" id="c1">
+        <img src="~/css/rns.png" class="card-img-top" alt="...">
+        <div class="card-body" >
+        <a asp-controller="Menu" asp-action="RiceNSpice" class="btn btn-dark">RiceNSpice</a>
+    </div>
+</div>
+<div class="card" style="width: 18rem;" id="c1">
+        <img src="~/css/wrap.png" class="card-img-top" alt="...">
+        <div class="card-body" >
+        <a asp-controller="Menu" asp-action="Wraps" class="btn btn-dark">Wraps</a>
+    </div>
+</div>
+<div class="card" style="width: 18rem;" id="c1">
+        <img src="~/css/b1 (4).png" class="card-img-top" alt="...">
+        <div class="card-body" >
+        <a asp-controller="Menu" asp-action="Deals" class="btn btn-dark">Deals</a>
+    </div>
+</div>
+@*<div class="card" style="display:inline-block; justify-content:space-around; width: 18rem;">
+  <img src="~/css/b1 (5).png" class="card-img-top" alt="Male-Avatar">
+  <div class="card-body">
+     <a asp-controller="Menu" asp-action="EverydayValue" class="btn btn-dark">Everyday Value</a>
+  </div>
+*@
+
+</div>
+
+    <img src="~/css/Jurassic World Hardees Promo Banner.jpeg" class="img-fluid" alt="   Promo">
+
+@*<div class="card" style="width: 12rem;" id="c1">
+        <img src="~/css/b1 (2).png" class="card-img-top"  alt="...">
+        <div class="card-body" >
+        <a asp-controller="Menu" asp-action="" class="btn btn-dark">Rice n Spice</a>
+    </div>
+    </div>
+    <div class="card" style="width: 12rem;" id="c1">
+        <img src="~/css/b1 (3).png" class="card-img-top" height="50%" width="50%" alt="...">
+        <div class="card-body" >
+        <a href="#" class="btn btn-dark">Wraps</a>
+    </div>
+    </div>
+    <div class="card" style="width: 12rem;" id="c1">
+        <img src="~/css/b1 (4).png" class="card-img-top" height="50%" width="50%" alt="...">
+        <div class="card-body" >
+        <a href="#" class="btn btn-dark">Deals</a>
+    </div>
+    </div><div class="card" style="width: 12rem;" id="c1">
+        <img src="~/css/b1 (5).png" class="card-img-top" height="50%" width="50%" alt="...">
+        <div class="card-body" >
+        <a href="#" class="btn btn-dark">Bawwrgers</a>*@
+  @*  </div>
+    </div>*@
+
+    </div>
+
+
+    <div style="color:white">
+Click <a asp-action="ListUsers" style="margin-bottom:50px;"> here </a>to see our other recent users
+</div>
+    
