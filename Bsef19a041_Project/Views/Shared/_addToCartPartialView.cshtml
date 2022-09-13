@@ -1,1 +1,74 @@
-﻿<a class="btn btn-dark" asp-controller="Welcome" asp-action="AddToCart" type="button">View Cart</a>
+﻿@*
+
+@using Bsef19a041_Project.Models
+@model User
+ @{
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<script type="text/javascript">
+    function submitUser() {
+        //var data = {
+        //    Email: $("#email").val(),
+        //    Password: $("#password").val(),
+        //}
+        var data = $("#submitUser").serialize();
+        console.log(data);
+        //alert(data);
+        $.ajax({
+            type: 'POST',
+            url: '/Cart/Search',
+            contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+            //data: JSON.stringify(data),
+            data: data,
+            success: function (result) {
+                alert('Successfully received Data ');
+                console.log(result);
+            },
+            error: function () {
+                alert('Failed to receive the Data');
+                console.log('Failed ');
+            }
+        })
+    }
+</script>
+<style>
+    body{
+        background-color:black;
+    }
+    #logo{
+        height:60%;
+        width:60%
+    }
+    #main{
+        display:flex;
+        background-color:darkgray;
+        margin-top:20px;
+        margin-bottom:20px;
+        text-align:center;
+        width:80%;
+        margin-left:10%;
+        border-radius:15px;
+    }
+    .field-validation-error{
+        color:orangered;
+
+}
+.input-validation-error
+{
+    border:1px solid orangered
+}
+</style>
+
+<a class="btn btn-dark" asp-controller="Cart" asp-action="AddToCart" type="button">View Cart</a>
+<div>
+    <form id="submitUser" novalidate action="/Cart/Search" method="post" class="needs-validation">
+        <input type="search"  onclick="submitUser()" asp-for="product_Name"/>
+        <input type="submit" class="btn btn-dark"  onclick="submitUser()"value="Search"/>
+
+    </form>
+
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}*@

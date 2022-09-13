@@ -28,21 +28,18 @@ namespace Bsef19a041_Project.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Login([FromQuery] userLogin uL)
+        public IActionResult Login([FromForm] userLogin uL)
         {
-            UserRepository uR = new UserRepository();
-            userLogin uL2 = new userLogin();
-            User u = new User();
-            var data=uR.GetUserLogin(uL);
-            data.Item1 = uL2;
-            data.Item2=u;
-            if (uL2!=null)
+
+            var data=userRepo.GetUserLogin(uL);
+           
+            if (data.Item2!=null)
             {
                 return View("Welcome", data.Item2);
             }
             else
             {
-                return this.Ok($"Form Data received!");
+                return this.Ok($"Email or password Does Not Match");
             }
         }
         public ViewResult UserForm()

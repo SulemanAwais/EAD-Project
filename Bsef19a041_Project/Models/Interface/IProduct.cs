@@ -3,6 +3,7 @@
     public interface IProduct
     {
         public List<Products> GetProducts(string Category);
-
+        public bool AddItemToCart(int ProductId);
+        public Products GetProductById(int ProductId);
     }
 }

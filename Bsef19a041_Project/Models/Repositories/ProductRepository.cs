@@ -5,6 +5,28 @@ namespace Bsef19a041_Project.Models.Repositories
 {
     public class ProductRepository : IProduct
     {
+        public bool AddItemToCart(int ProductId)
+        {
+            int Price = 0;
+            var db = new ApplicationDBContext();
+            db.Product.Where(p => p.Id==ProductId).ToList().
+                ForEach(p=>Price=p.Price);
+            if (Price==0)
+            {
+                return false;
+            }
+            else
+                return true;
+        }
+
+        public Products GetProductById(int ProductId)
+        {
+            Products pro = new Products();
+            var db = new ApplicationDBContext();
+            db.Product.Where(p => p.Id==ProductId).ToList().ForEach(p=>pro=p);
+            return pro;
+        }
+
         public List<Products> GetProducts(string Category)
         {
             List<Products> PList = new List<Products>();
@@ -21,8 +43,9 @@ namespace Bsef19a041_Project.Models.Repositories
                     Id =System.Convert.ToInt32(dr.GetValue(0)),
                     ImageName =System.Convert.ToString(dr.GetValue(1)),
                     Path =System.Convert.ToString(dr.GetValue(2)),
-
+                    Price=System.Convert.ToInt32(dr.GetValue(4)),
                 };
+                p.Path=p.Path.Trim()+p.ImageName.Trim();
                 PList.Add(p);
             }
             return PList;

@@ -4,7 +4,7 @@
     {
         public List<User> GetAllUsers();
         public string AddUser(User u);
-        public (userLogin?, User) GetUserLogin(userLogin user);
+        public (userLogin, User) GetUserLogin(userLogin login);
 
     }
 }

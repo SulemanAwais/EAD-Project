@@ -1,4 +1,9 @@
-﻿@model List<Bsef19a041_Project.Models.Products>
+﻿<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+@model List<Bsef19a041_Project.Models.Products>
+@{
+     string  imageData="";
+}
 <style>
     #c1{
             background-color: orangered;
@@ -8,12 +13,27 @@
         }
 </style>
   @foreach (Bsef19a041_Project.Models.Products p in Model)
-        {           
-         <div class="card" id="c1" style="display:inline-block; justify-content:space-around; width: 18rem;">
-  <img src="~/css/wrap.png" class="card-img-top">
+{
+    imageData = p.Path + p.ImageName;
+    <div class="card" id="c1" style="display:inline-block; justify-content:space-around; width: 18rem;" class="gridShortlist active" onclick="shortlist(this, 1);">
+        <img src="@Url.Content("/css/" +p.ImageName)"   class="card-img-top" >
+        
   <div class="card-body">
     <h5 class="card-title">@p.ImageName</h5>
     <a href="#" class="btn btn-dark"id="b_@p.Id" >Add To Cart </a>
     </div>
-    </div>
-        }
+   </div>
+}
+   <script>
+function shortlist(_this, intValue){
+    if (intValue == 1){
+        var src = $(_this).find('img').attr('src');
+        console.log(src);
+        console.log(ImageData);
+
+    }
+    else if (intValue == 0){
+        alert("deactive");
+    }
+}
+</script>

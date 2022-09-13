@@ -10,6 +10,7 @@ namespace Bsef19a041_Project.Controllers
         }
         public IActionResult Wraps()
         {
+
             return View();
         }
         public IActionResult RiceNSpice()

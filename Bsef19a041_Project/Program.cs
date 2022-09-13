@@ -5,6 +5,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
+builder.Services.AddSingleton<IProduct, ProductRepository>();
+
 builder.Services.AddSingleton<IUser,UserRepository>();
 
 var app = builder.Build();
@@ -15,6 +19,9 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Home/Error");
 }
 app.UseStaticFiles();
+
+//Middleware Of Sessions 
+app.UseSession();
 
 app.UseRouting();
 

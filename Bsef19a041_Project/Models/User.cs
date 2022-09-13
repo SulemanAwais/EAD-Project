@@ -16,6 +16,7 @@ namespace Bsef19a041_Project.Models
         public string? Email { get; set; }
         [Required(ErrorMessage = "Please Enter Password")]
         [StringLength(50)]
+        [DataType(DataType.Password)]
         public string?   Password { get; set; }
     }
 }
