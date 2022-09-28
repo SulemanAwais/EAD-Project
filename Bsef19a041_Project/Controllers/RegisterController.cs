@@ -10,13 +10,16 @@ namespace Bsef19a041_Project.Controllers
     public class RegisterController : Controller
     {
         private readonly IUser userRepo;
+        //public static User LoggedInUser;
         private readonly ILogger<RegisterController> _logger;
         private readonly IWebHostEnvironment Environment;
-        public RegisterController(ILogger<RegisterController> logger, IWebHostEnvironment environment,IUser u)
+        public RegisterController(ILogger<RegisterController> logger, IWebHostEnvironment environment,IUser u/*, User loggedInUser*/)
         {
             _logger = logger;
             Environment = environment;
             userRepo=u;
+            //LoggedInUser=loggedInUser;
+            
         }
         public IActionResult ListUsers()
         {
@@ -30,18 +33,37 @@ namespace Bsef19a041_Project.Controllers
         [HttpPost]
         public IActionResult Login([FromForm] userLogin uL)
         {
-
-            var data=userRepo.GetUserLogin(uL);
-           
-            if (data.Item2!=null)
+            if (uL.Email == "admin@admin")
             {
-                return View("Welcome", data.Item2);
+                return RedirectToAction("Index", "Admin");
             }
             else
             {
-                return this.Ok($"Email or password Does Not Match");
+                var data = userRepo.GetUserLogin(uL);
+
+                if (data.Item2!=null)
+                {
+                    //LoggedInUser=data.Item2;
+                    return View("Welcome", data.Item2);
+                }
+                else
+                {
+                    return this.Ok($"Email or password Does Not Match");
+                }
             }
+            
         }
+        [HttpPost]
+        public IActionResult Welcome(User u)
+        {
+            
+            return View("Welcome",u);
+        }
+        //[HttpGet]
+        //public IActionResult Welcome()
+        //{
+        //    return View();
+        //}
         public ViewResult UserForm()
         {
             return View();
@@ -71,6 +93,7 @@ namespace Bsef19a041_Project.Controllers
             }
             if (ModelState.IsValid)
             {
+                //LoggedInUser=u;
                 userRepo.AddUser(u);
                 return View("Welcome", u);
             }

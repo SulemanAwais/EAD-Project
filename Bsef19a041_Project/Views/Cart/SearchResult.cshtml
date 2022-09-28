@@ -1,0 +1,29 @@
+﻿@model List<Bsef19a041_Project.Models.Products>
+@{
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+<style>
+    body{
+        background-color:black;
+    }
+</style>
+<div class="container mt-3">
+  <h2></h2>
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+        @foreach (Bsef19a041_Project.Models.Products p in Model)
+        {
+            <tr>
+                <td> @p.ImageName </td>
+                <td>@p.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

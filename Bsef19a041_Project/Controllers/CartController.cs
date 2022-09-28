@@ -1,6 +1,8 @@
 ﻿using Bsef19a041_Project.Models;
 using Bsef19a041_Project.Models.Interface;
 using Microsoft.AspNetCore.Mvc;
+using Bsef19a041_Project.Models.ViewModel;
+using AutoMapper;
 
 namespace Bsef19a041_Project.Controllers
 {
@@ -9,38 +11,63 @@ namespace Bsef19a041_Project.Controllers
         public readonly IProduct productRepo;
         private readonly ILogger<CartController> _logger;
         private readonly IWebHostEnvironment Environment;
+        private readonly IMapper _mapper;
 
-        public CartController(IProduct product, ILogger<CartController> logger, IWebHostEnvironment environment)
+        public CartController(IProduct product, ILogger<CartController> logger, IMapper mapper ,IWebHostEnvironment environment)
         {
             productRepo=product;
             _logger=logger;
             Environment=environment;
+            _mapper = mapper;
+
         }
         public IActionResult Index()
         {
             return View();
         }
-        public IActionResult Search([FromForm] Search S)
+        [HttpPost]
+        public IActionResult SearchResult(List<Products> LIST)
         {
             return View();
         }
-       
-        public IActionResult AddToCart([FromQuery] int ItemId)
+        [HttpGet]
+        public IActionResult SeacrhResult()
         {
-            Products p=productRepo.GetProductById(ItemId);
+            return View();
+        }
+        public IActionResult Search([FromForm] Products p)
+        {
+            List<Products> productList = new List<Products>();
+            productList=productRepo.GetProductByName(p.ImageName);
+            return View("SearchResult",productList);
+        }
+        [Route("Id")]
+        public IActionResult AddToCart(/*[FromQuery] */int Id)
+        {
+            //Products p=productRepo.GetProductById(Id);
             List<Products> product = new List<Products>();
             string itemsList = "";
+            string info = "";
+            Products p=productRepo.GetProduct(Id);
+            ProductViewModel pViewModel = _mapper.Map<ProductViewModel>(p);
+
             if (HttpContext.Session.Keys.Contains("added_Items"))
             {
-                itemsList = itemsList;
+                String addedItems = HttpContext.Session.GetString("added_Items");
+                //pViewModel = pViewModel.Remove(pViewModel.Length-4, 4);
+                info= pViewModel.ProductName+ " already added to the cart at \n"+addedItems;
             }
             else
             {
-                itemsList = itemsList + ","+ ItemId;
+                itemsList = itemsList + ","+ Id;
                 product.Add(p);
-                HttpContext.Session.SetString("added_Items", itemsList);
+                int count = 1;
+                String c = System.Convert.ToString(count);
+                HttpContext.Session.SetString("added_Items", System.DateTime.Now.ToString());
+                HttpContext.Session.SetString("quantity", c);
+
             }
-            return View("AddToCart", ItemId);
+            return View("AddToCart", info);
 
         }
     }

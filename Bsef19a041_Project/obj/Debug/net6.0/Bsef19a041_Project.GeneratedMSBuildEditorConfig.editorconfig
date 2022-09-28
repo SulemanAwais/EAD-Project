@@ -15,12 +15,48 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\Pucit\6th Semester\Enterprise Application Development\Bsef19a041_Project\Bsef19a041_Project
 build_property._RazorSourceGeneratorDebug = 
 
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Admin/Added.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Admin/AddProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkUHJvZHVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Admin/AdminSignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5TaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Admin/Deleted.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Admin/EditProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFByb2R1Y3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Admin/ViewAllProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0FsbFByb2R1Y3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Cart/AddToCart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxBZGRUb0NhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Cart/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Cart/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Cart/SearchResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxTZWFyY2hSZXN1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Home/Index.cshtml]
@@ -41,6 +77,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Menu/Wraps.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxXcmFwcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Register/AdminHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcQWRtaW5Ib21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Register/ListUsers.cshtml]
@@ -75,6 +115,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUm5TXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Shared/Components/Search/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2VhcmNoXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Shared/Components/WrapsMenu/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcV3JhcHNNZW51XERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -83,12 +127,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9hZGRUb0NhcnRQYXJ0aWFsVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Shared/_adminNavOptionsPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9hZG1pbk5hdk9wdGlvbnNQYXJ0aWFsVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Shared/_layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9sYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Shared/_navOptionsPartialView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9uYXZPcHRpb25zUGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Shared/_searchPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9zZWFyY2hQYXJ0aWFsVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Pucit/6th Semester/Enterprise Application Development/Bsef19a041_Project/Bsef19a041_Project/Views/Shared/_ValidationScriptsPartial.cshtml]

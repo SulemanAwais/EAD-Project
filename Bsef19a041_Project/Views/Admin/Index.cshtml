@@ -1,0 +1,58 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+@section Options{
+    <partial name="_adminNavOptionsPartialView" />
+
+}
+<style>
+    #main{
+        width:400px;
+    }
+    body{
+        background-color:black;
+        text-align:center;
+    }
+    #logo{
+        height:60%;
+        width:60%
+    }
+    form{
+        margin-left:50%;
+    }
+    /*#main{
+        display:flex;
+        background-color:darkgray;
+        margin-top:20px;
+        margin-bottom:20px;
+        text-align:center;
+        margin-left:40px;
+        padding-left:0px;
+        border-radius:15px;
+    }*/
+    .field-validation-error{
+        color:orangered;
+
+}
+.input-validation-error
+{
+    border:1px solid orangered
+}
+h3{
+    color:grey;
+    display:inline;
+}
+</style>
+<div>
+    <h3 >Welcome to the </h3>
+    <h3 style="color:orangered"> Admin </h3>
+    <h3> Page</h3>
+    
+    <br />
+    <br/>
+<a class="btn btn-dark" asp-action="ViewAllProducts" type="button">View All Products</a>
+<a class="btn btn-dark" asp-action="AddProduct" asp-controller="Admin" type="button">Add Product</a>
+<br />
+
+        </div>

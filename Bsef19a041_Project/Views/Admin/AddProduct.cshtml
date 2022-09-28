@@ -1,0 +1,69 @@
+﻿@using Bsef19a041_Project.Models;
+@model Products
+@{
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+@section Options{
+    <partial name="_adminNavOptionsPartialView" />
+
+}
+<style>
+    #main{
+        width:400px;
+    }
+    body{
+        background-color:black;
+    }
+    #logo{
+        height:60%;
+        width:60%
+    }
+    form{
+        margin-left:50%;
+    }
+    /*#main{
+        display:flex;
+        background-color:darkgray;
+        margin-top:20px;
+        margin-bottom:20px;
+        text-align:center;
+        margin-left:40px;
+        padding-left:0px;
+        border-radius:15px;
+    }*/
+    .field-validation-error{
+        color:orangered;
+
+}
+.input-validation-error
+{
+    border:1px solid orangered
+}
+</style>
+<div id="main">
+    <form method="post" action="AddProduct" enctype="multipart/form-data">
+        <p style="color:orangered">Select Product Image</p>
+        <input type="file" name="PostedFiles"multiple />
+        @*<input type="submit" value="Upload" />*@
+        <div class="mb-3" >
+            <br />
+          @*<label for="exampleFormControlInput1" class="form-label">ID:</label>
+          <input type="text" class="form-control" asp-for="Id" readonly id="exampleFormControlInput1" placeholder="">*@
+       
+        <div class="mb-3">
+          <label for="exampleFormControlInput1"  class="form-label" style="color:orangered">Path:</label>
+          <input type="text" class="form-control" asp-for="Path" id="exampleFormControlInput1" placeholder="/xyz/abc">
+
+        </div>
+        </div><div class="mb-3">
+          <label for="exampleFormControlInput1"  class="form-label" style="color:orangered">Category:</label>
+          <input type="text" class="form-control" asp-for="Category" id="exampleFormControlInput1" placeholder="B if Burger">
+        </div><div class="mb-3">
+          <label for="exampleFormControlInput1"  class="form-label" style="color:orangered">Price:</label>
+          <input type="text" class="form-control" asp-for="Price" id="exampleFormControlInput1" placeholder="in Rupees">
+
+        </div>
+        
+        <input type="submit" class="btn btn-dark" value="Add Product">
+    </form>
+</div>

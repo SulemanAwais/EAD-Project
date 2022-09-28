@@ -1,8 +1,12 @@
-﻿@{
+﻿@*@using Bsef19a041_Project.Models;
+@model User;*@
+@{
     Layout = "~/Views/Shared/_layout.cshtml";
 }
 @section Options{
     <partial name="_addToCartPartialView" />
+    <partial name="_searchPartialView.cshtml"/>
+
 }
 <style>
      #line{
@@ -17,7 +21,7 @@
     }
 </style>
     <div>
-    <p class="h1" style="color:white">Wraps</p>
+    <p class="h1" style="color:white">Deals</p>
 
         <hr style='display:inline-block;'id="Line" />
     </div>

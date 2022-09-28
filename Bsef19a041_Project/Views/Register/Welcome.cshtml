@@ -1,9 +1,13 @@
-﻿@model Bsef19a041_Project.Models.User
+﻿@using Bsef19a041_Project.Models;
+@model User
+
 @{
     Layout = "~/Views/Shared/_layout.cshtml";
 }
 @section Options{
     <partial name="_addToCartPartialView" />
+    @*<vc:search></vc:search>*@
+
 }
 <style>
     .img-fluid{
@@ -65,7 +69,7 @@
     <div class="card" style="width: 18rem;" id="c1">
         <img src="~/css/b1 (7).png" class="card-img-top" alt="...">
         <div class="card-body" >
-        <a asp-controller="Menu" asp-action="EverydayValue" class="btn btn-dark">Everyday Value</a>
+        <a asp-controller="Menu" asp-action="EverydayValue" asp-route-UserID="@Model.Id" class="btn btn-dark">Everyday Value</a>
     </div>
 </div>
 <div class="card" style="width: 18rem;" id="c1">
@@ -83,7 +87,7 @@
 <div class="card" style="width: 18rem;" id="c1">
         <img src="~/css/b1 (4).png" class="card-img-top" alt="...">
         <div class="card-body" >
-        <a asp-controller="Menu" asp-action="Deals" class="btn btn-dark">Deals</a>
+        <a asp-controller="Menu" asp-action="Deals" asp-route-UserId="@Model.Id" class="btn btn-dark">Deals</a>
     </div>
 </div>
 @*<div class="card" style="display:inline-block; justify-content:space-around; width: 18rem;">

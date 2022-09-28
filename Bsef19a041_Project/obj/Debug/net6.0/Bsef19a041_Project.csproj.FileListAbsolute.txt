@@ -57,3 +57,5 @@ E:\Pucit\6th Semester\Enterprise Application Development\Bsef19a041_Project\Bsef
 E:\Pucit\6th Semester\Enterprise Application Development\Bsef19a041_Project\Bsef19a041_Project\obj\Debug\net6.0\Bsef19a041_Project.csproj.CopyComplete
 E:\Pucit\6th Semester\Enterprise Application Development\Bsef19a041_Project\Bsef19a041_Project\bin\Debug\net6.0\Humanizer.dll
 E:\Pucit\6th Semester\Enterprise Application Development\Bsef19a041_Project\Bsef19a041_Project\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\Pucit\6th Semester\Enterprise Application Development\Bsef19a041_Project\Bsef19a041_Project\bin\Debug\net6.0\AutoMapper.dll
+E:\Pucit\6th Semester\Enterprise Application Development\Bsef19a041_Project\Bsef19a041_Project\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

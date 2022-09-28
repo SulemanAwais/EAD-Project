@@ -1,10 +1,6 @@
-﻿@*
-
-@using Bsef19a041_Project.Models
+﻿@using Bsef19a041_Project.Models
 @model User
- @{
-    Layout = "~/Views/Shared/_layout.cshtml";
-}
+ 
 
 <script type="text/javascript">
     function submitUser() {
@@ -50,25 +46,10 @@
         margin-left:10%;
         border-radius:15px;
     }
-    .field-validation-error{
-        color:orangered;
-
-}
-.input-validation-error
-{
-    border:1px solid orangered
-}
+   
 </style>
+<a class="btn btn-dark" asp-controller="Cart" asp-action="AddToCart" type="button"><i class ="fa fa-shopping-basket fa-2x" ></i></a>
 
-<a class="btn btn-dark" asp-controller="Cart" asp-action="AddToCart" type="button">View Cart</a>
-<div>
-    <form id="submitUser" novalidate action="/Cart/Search" method="post" class="needs-validation">
-        <input type="search"  onclick="submitUser()" asp-for="product_Name"/>
-        <input type="submit" class="btn btn-dark"  onclick="submitUser()"value="Search"/>
-
-    </form>
-
-</div>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}*@
+}

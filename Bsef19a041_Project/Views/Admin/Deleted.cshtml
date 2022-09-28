@@ -1,0 +1,52 @@
+﻿@using Bsef19a041_Project.Models;
+@model Products
+@{
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+@section Options{
+    <partial name="_adminNavOptionsPartialView" />
+
+}
+<style>
+    #main{
+        width:400px;
+    }
+    body{
+        background-color:black;
+    }
+    #logo{
+        height:60%;
+        width:60%
+    }
+    form{
+        margin-left:50%;
+    }
+    /*#main{
+        display:flex;
+        background-color:darkgray;
+        margin-top:20px;
+        margin-bottom:20px;
+        text-align:center;
+        margin-left:40px;
+        padding-left:0px;
+        border-radius:15px;
+    }*/
+    .field-validation-error{
+        color:orangered;
+
+}
+.input-validation-error
+{
+    border:1px solid orangered
+}
+</style>
+<div>
+    <h3>Product </h3>
+    <h3 style="color:orangered">Deleted </h3>
+    <h3>Succesfully</h3>
+    
+    <br />
+
+Click <a type="button" asp-action="ViewAllProducts" style="margin-bottom:50px;"> here </a>to redirect to home page
+
+</div>

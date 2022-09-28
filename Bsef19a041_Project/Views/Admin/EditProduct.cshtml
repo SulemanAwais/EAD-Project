@@ -1,0 +1,59 @@
+﻿@using Bsef19a041_Project.Models;
+@model Products
+@{
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+@section Options{
+    <partial name="_adminNavOptionsPartialView" />
+
+}
+<style>
+    body{
+        background-color:black;
+    }
+    #logo{
+        height:60%;
+        width:60%
+    }
+    #main{
+        display:flex;
+        background-color:darkgray;
+        margin-top:20px;
+        margin-bottom:20px;
+        text-align:center;
+        width:auto;
+        margin-right:40px;
+        margin-left:40px;
+        border-radius:15px;
+    }
+    .field-validation-error{
+        color:orangered;
+
+}
+.input-validation-error
+{
+    border:1px solid orangered
+}
+</style>
+<form method="post" action="EditProduct" enctype="multipart/form-data">
+        <p>Select Product Image</p>
+        <input type="file" name="PostedFiles"multiple />
+        <input type="submit" value="Upload" />
+        <div class="mb-3">
+            <br />
+          @*<label for="exampleFormControlInput1" class="form-label">ID:</label>
+          <input type="text" class="form-control" asp-for="Id" readonly id="exampleFormControlInput1" placeholder="">*@
+        </div><div class="mb-3">
+          <label for="exampleFormControlInput1"  class="form-label">Image Name:</label>
+          <input type="text" class="form-control" asp-for="ImageName" id="exampleFormControlInput1" placeholder="Gates">
+        </div><div class="mb-3">
+          <label for="exampleFormControlInput1"  class="form-label">Path:</label>
+          <input type="text" class="form-control" asp-for="Path" id="exampleFormControlInput1" placeholder="name@example.com">
+
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1"  class="form-label">Price:</label>
+          <input type="text" class="form-control" asp-for="Price" id="exampleFormControlInput1" placeholder="123456789">
+        </div>
+        <input type="submit" class="btn btn-dark" value="Edit Product">
+    </form>

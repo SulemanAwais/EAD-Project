@@ -2,10 +2,10 @@
 {
     public abstract class Audit
     {
-        public  string? CreatedBy;
-        public  DateTime CreatedAt;
-        public string? ModifiedBy;
-        public  DateTime ModifiedAt;
+        public  string? CreatedBy { get; set; }
+        public  DateTime CreatedAt { get; set; }
+        public string? ModifiedBy { get; set; }
+        public  DateTime ModifiedAt { get; set; }
 
     }
 }

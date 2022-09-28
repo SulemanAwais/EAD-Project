@@ -5,5 +5,14 @@
         public List<Products> GetProducts(string Category);
         public bool AddItemToCart(int ProductId);
         public Products GetProductById(int ProductId);
+        public List<Products> GetAllProducts();
+        public Products GetProduct(int Id);
+        public Products UpdateProduct(Products Product);
+        public bool DeleteProduct(int ProductId);
+        public Products AddProduct(Products p);
+        public List<Products> GetProductByName(String ProductName);
+
+
+
     }
 }

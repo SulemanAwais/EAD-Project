@@ -5,10 +5,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddAutoMapper(typeof(Program));
+//Services for sessions
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
-builder.Services.AddSingleton<IProduct, ProductRepository>();
 
+builder.Services.AddSingleton<IProduct, ProductRepository>();
 builder.Services.AddSingleton<IUser,UserRepository>();
 
 var app = builder.Build();

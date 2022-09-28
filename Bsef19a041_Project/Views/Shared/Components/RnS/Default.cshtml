@@ -10,9 +10,10 @@
   @foreach (Bsef19a041_Project.Models.Products p in Model)
         {           
          <div class="card" id="c1" style="display:inline-block; justify-content:space-around; width: 18rem;">
-  <img src="~/css/rns.png" class="card-img-top">
+  <img src= "~/css/@p.ImageName"   class="card-img-top">
+  @*<img src="/css/"*@
   <div class="card-body">
-    <h5 class="card-title">@p.ImageName</h5>
+    <h5 class="card-title">@p.ImageName.Remove(p.ImageName.Length-4,4)</h5>
     <a href="#" class="btn btn-dark"id="b_@p.Id" >Add To Cart </a>
     </div>
     </div>

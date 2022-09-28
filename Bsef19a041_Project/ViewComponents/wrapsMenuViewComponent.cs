@@ -11,6 +11,14 @@ namespace Bsef19a041_Project.ViewComponents
             string category = "W";
             List<Products> products = new List<Products>();
             products=productRepo.GetProducts(category);
+            List<String> ImageFullPath = new List<String>();
+            foreach (var item in products)
+            {
+               String p= item.Path/*+item.ImageName*/;
+                ImageFullPath.Add(p);
+            }
+            ViewBag.ImagePath=ImageFullPath;
+
             return View(products);
         }
     }

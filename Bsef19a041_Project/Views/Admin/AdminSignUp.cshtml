@@ -1,0 +1,51 @@
+﻿@using Bsef19a041_Project.Models;
+@model Admin
+@{
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+<style>
+    body{
+        background-color:black;
+    }
+    #logo{
+        height:60%;
+        width:60%
+    }
+    #main{
+        display:flex;
+        background-color:darkgray;
+        margin-top:20px;
+        margin-bottom:20px;
+        text-align:center;
+        width:auto;
+        margin-right:40px;
+        margin-left:40px;
+        border-radius:15px;
+    }
+    .field-validation-error{
+        color:orangered;
+
+}
+.input-validation-error
+{
+    border:1px solid orangered
+}
+</style>
+<div id="main">
+    <div class="text-center">
+      <img src="~/css/logoPNG.png" class="rounded" alt="..." id="logo">
+      <h3 style="color:orangered">Bawwrgers Lab</h3>
+    </div>
+    <form method="post" action="Admin/AdminSignUp">
+       <div asp-validation-summary="ModelOnly"> </div>
+       <input class="form-control" asp-for="Name" />
+       <label asp-for="Name">Name: </label>
+       <input class="form-control" asp-for="Email" />
+       <label asp-for="Email">Email:</label>
+       <span asp-validation-for="Email"></span>"
+       <input class="form-control" asp-for="Password" />
+       <label asp-for="Password">Password:</label>
+       <span asp-validation-for="Password"></span>"
+       <input type="submit" class="btn btn-dark" value="Create Account">
+    </form>
+</div>
