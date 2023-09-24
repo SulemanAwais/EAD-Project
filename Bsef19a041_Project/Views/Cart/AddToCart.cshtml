@@ -1,11 +1,20 @@
-﻿@*
+﻿
 <script>
     alert('Item Added To Cart')
-</script>*@
+</script>
 
+@{
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+@section Options{
+    <partial name="_addToCartPartialView" />
+    <partial name="_searchPartialView.cshtml"/>
+
+}
 
 <div>
-    @Model 
+    Product with refrence number @Model has been added 
+    
     <br />
     @*Click <a type="button" asp-action="Welcome" asp-controller="Register" style="margin-bottom:50px;"> here </a>to redirect to home page*@
 </div>

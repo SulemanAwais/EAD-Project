@@ -48,85 +48,62 @@ namespace Bsef19a041_Project.Models.Repositories
         public Products GetProduct(int Id)
         {
             Products p = new Products();
-
-            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MyShopDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            SqlConnection connection = new(connectionString);
-            connection.Open();
-            string query = $"Select * from Product where Id='{Id}'";
-            SqlCommand cmd = new SqlCommand(query, connection);
-            SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-
-                {
-                    p.Id =System.Convert.ToInt32(dr.GetValue(0));
-                    p.ImageName =System.Convert.ToString(dr.GetValue(1));
-                    p.Path =System.Convert.ToString(dr.GetValue(2));
-                    p.Price=System.Convert.ToInt32(dr.GetValue(4));
-                };
-            }
+            var db = new ApplicationDBContext();
+            db.Product.Where(p => p.Id==Id).ToList().ForEach(P => p=P);
+            
             return p;
         }
 
         public List<Products> GetProducts(string Category)
         {
             List<Products> PList = new List<Products>();
-            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MyShopDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            SqlConnection connection = new(connectionString);
-            connection.Open();
-            string query = $"Select * from Product where Category='{Category}'";
-            SqlCommand cmd = new SqlCommand(query, connection);
-            SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
+            var db = new ApplicationDBContext();
+            var Query=db.Product.Where(p => p.Category==Category);
+            foreach (var item in Query)
             {
-                Products p = new()
-                {
-                    Id =System.Convert.ToInt32(dr.GetValue(0)),
-                    ImageName =System.Convert.ToString(dr.GetValue(1)),
-                    Path =System.Convert.ToString(dr.GetValue(2)),
-                    Price=System.Convert.ToInt32(dr.GetValue(4)),
-                };
-                //p.Path=p.Path.Trim()+p.ImageName.Trim();
-                PList.Add(p);
+                PList.Add(item);
             }
             return PList;
         }
 
-        public Products UpdateProduct(Products Product)
+        public Products UpdateProduct(int Id,Products Product)
         {
-            //var db = new ApplicationDBContext();
-            //db.Product.Where(p => p.Id==Product.Id).ToList().ForEach(p => p.Price=Product.Price);
-            //db.SaveChanges();
-            //return Product;
-
-            List<Products> PList = new List<Products>();
-            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MyShopDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            SqlConnection connection = new(connectionString);
-            connection.Open();
-            string query = $"Update Product set Price ={Product.Price} where Id={Product.Id}";
-            SqlCommand cmd = new SqlCommand(query, connection);
-            int dr = cmd.ExecuteNonQuery();
-            if (dr>=1)
+            var db = new ApplicationDBContext();
+            var query = db.Product.Where(p => p.Id==Id);
+            foreach (var item in query)
             {
-                return Product;
+                item.Price=Product.Price;
             }
-            connection.Close();
-            return null;
+            db.SaveChanges();
+            return Product;
+
+            //List<Products> PList = new List<Products>();
+            //string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MyShopDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            //SqlConnection connection = new(connectionString);
+            //connection.Open();
+            //string query = $"Update Product set Price ={Product.Price} where Id={Product.Id}";
+            //SqlCommand cmd = new SqlCommand(query, connection);
+            //int dr = cmd.ExecuteNonQuery();
+            //if (dr>=1)
+            //{
+            //    return Product;
+            //}
+            //connection.Close();
+            //return null;
         }
 
         public bool DeleteProduct(int ProductId)
         {
-            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MyShopDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            SqlConnection connection = new(connectionString);
-            connection.Open();
-            string query = $"Delete from Product where Id={ProductId}";
-            SqlCommand cmd = new SqlCommand(query, connection);
-            int dr = cmd.ExecuteNonQuery();
-            if (dr>=1)
+            var db = new ApplicationDBContext();
+            var query = from product in db.Product where product.Id==ProductId select product;
+            Products newProduct = new Products();
+            foreach (var item in query)
             {
-                return true;
+                newProduct=item;
             }
-            else return false;
+            db.Product.Remove(newProduct);
+            db.SaveChanges();
+            return true;
         }
 
         public Products AddProduct(Products p)

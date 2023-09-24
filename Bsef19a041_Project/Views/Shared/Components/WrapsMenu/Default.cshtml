@@ -22,7 +22,7 @@
         @*@Url.Content("/css/"@p.ImageName*@
   <div class="card-body">
     <h5 class="card-title">@p.ImageName.Remove(p.ImageName.Length-4,4)</h5>
-    <a href="#" class="btn btn-dark"id="b_@p.Id" >Add To Cart </a>
+     <a type="button" class="btn btn-dark" asp-controller="Cart" asp-action="AddToCart" asp-route-Id="@p.Id" >Add To Cart </a>
     </div>
    </div>
 }

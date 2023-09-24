@@ -7,7 +7,7 @@
         public Products GetProductById(int ProductId);
         public List<Products> GetAllProducts();
         public Products GetProduct(int Id);
-        public Products UpdateProduct(Products Product);
+        public Products UpdateProduct(int Id, Products Product);
         public bool DeleteProduct(int ProductId);
         public Products AddProduct(Products p);
         public List<Products> GetProductByName(String ProductName);

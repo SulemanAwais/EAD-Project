@@ -7,5 +7,7 @@
         public string ProductPrice { get; set; }
         public string ProductPath { get; set; }
         public int UserId { get; set; }
+        public string UserName { get; set; }
+
     }
 }

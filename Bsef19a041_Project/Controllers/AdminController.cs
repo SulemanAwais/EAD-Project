@@ -32,10 +32,10 @@ namespace Bsef19a041_Project.Controllers
         public IActionResult AdminSignUp(Admin a)
         {
             AdminRepo.AddAdmin(a);
-            return View();
+            return View("Index");
         }
         [HttpPost]
-        public IActionResult Login([FromForm] Admin a)
+        public IActionResult Login(Admin a)
         {
             if (!ModelState.IsValid)
             {
@@ -56,18 +56,24 @@ namespace Bsef19a041_Project.Controllers
             return View(ProductRepo.GetAllProducts());
         }
         [HttpPost]
-        public IActionResult EditProduct(Products P)
+        [Route("Id")]
+        public IActionResult EditProduct()
         {
+            return View();
+            //Products p = ProductRepo.UpdateProduct(Id);
 
-            Products p = ProductRepo.UpdateProduct(P);
-
-            return View("Index");
         }
+        [Route("Id")]
         [HttpGet]
-        public IActionResult EditProduct(int id)
+        public IActionResult EditProduct(int Id, [FromForm] Products Product)
         {
-            Products p= ProductRepo.GetProduct(id);
-            return View("EditProduct",p);
+            //Products p = ProductRepo.UpdateProduct( Id);
+
+            //Products p = ProductRepo.GetProduct(id);
+            Products p = ProductRepo.UpdateProduct(Id, Product);
+
+            //Products p = ProductRepo.GetProduct(id);
+            return View("Index");
         }
         [HttpGet]
         public IActionResult AddProduct()

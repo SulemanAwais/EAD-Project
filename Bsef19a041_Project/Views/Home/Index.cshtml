@@ -6,6 +6,11 @@
 
 }
 <style>
+     #c1{
+            background-color: orangered;
+            
+         
+        }
     #line{
         border-top:2px solid white;
         background-color:orangered;
@@ -17,10 +22,18 @@
     }
     .carousel-inner{
   width:95%;
-  max-height: 80% !important;
-  border-radius:15px;
+  max-height: 75% ;
+  border-radius: 15px ;
   margin-left:35px;
 }
+.underline {
+    color: white;
+  }
+  .underline-span {
+    text-decoration: underline orangered;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 10px;
+  }
 #announcmentArea{
     margin-top:20px;
     margin-bottom:20px;
@@ -78,16 +91,20 @@
  
 </div>
 <hr id="line" />
-<div id="announcmentArea">
-<h1 class="display-3">Discount Offers</h1>
+<div id="announcmentArea" style="margin-bottom:10px;">
+<h1 class="underline"><span span class="underline-span">Special O</span>ffers</h1>
 
 </div>
 
-<div class="card" style="width: 20rem;">
-  @*<img src="~/css/istockphoto-1206323282-612x612-removebg-preview.png" class="card-img-top" alt="...">*@
-  @*<div class="card-body">
-    <p class="card-text">25% Off on Beef Burgers and Wraps.</p>
-  </div>*@
-  <vc:discount-offers></vc:discount-offers>
+<div style="display: flex; justify-content: center;">
+  <div class="card" id="c1" style="width: 18rem;margin-top: 25px;">
+    <img src="~/css/alexander-mils-SNLfVYmL8os-unsplash.jpg"class="card-img-top rounded-lg">
+    <div class="card-body">
+      <h5 class="card-title">25% Off on Beef Burgers and Wraps.</h5>
+    </div>
+  </div>
+</div>
+
+  @*<vc:discount-offers></vc:discount-offers>*@
 </div>
 </div>

@@ -9,21 +9,67 @@ namespace Bsef19a041_Project.Controllers
     public class CartController : Controller
     {
         public readonly IProduct productRepo;
-        private readonly ILogger<CartController> _logger;
+        public readonly IUser userRepo;
+        private readonly IOrder orderRepo;
+       private readonly ILogger<CartController> _logger;
         private readonly IWebHostEnvironment Environment;
         private readonly IMapper _mapper;
 
-        public CartController(IProduct product, ILogger<CartController> logger, IMapper mapper ,IWebHostEnvironment environment)
+        public CartController(IProduct product, ILogger<CartController> logger, IMapper mapper , IWebHostEnvironment environment, IUser user, IOrder orderRepo)
         {
+            userRepo=user;
             productRepo=product;
             _logger=logger;
             Environment=environment;
             _mapper = mapper;
-
+            this.orderRepo=orderRepo;
         }
+        [HttpGet]
+        public IActionResult ViewCart()
+        {
+            int userid = userRepo.LoggedInUser();
+            string product = orderRepo.products(userid);
+            //string[] productId;
+            //productId = productList.Split(",");
+            List<Products> productsInCart = new List<Products>();
+            productsInCart=orderRepo.Products(userid);
+            //foreach (var item in productId)
+            //{
+            //    int ID = int.Parse(item);
+            //    Products p = productRepo.GetProductById(ID);
+            //    productsInCart.Add(p);
+            //}
+            
+            return View("ViewCart", productsInCart);
+        }
+
+        //[HttpGet]
+        //public IActionResult ViewCrat()
+        //{
+        //    return View();
+        //}
+
         public IActionResult Index()
         {
             return View();
+        }
+        [HttpGet]
+        public IActionResult PlaceOrder()
+        {
+            string info = null;
+            if (HttpContext.Session.Keys.Contains("cart_confirmed"))
+            {
+                String cartConfirmed = HttpContext.Session.GetString("cart_confirmed");
+                info=" Your order has already been placed at  \n"+cartConfirmed;
+            }
+
+            else
+            {
+                HttpContext.Session.SetString("cart_confirmed", System.DateTime.Now.ToString());
+
+                info="order placed successfully";
+            }
+            return View("PlaceOrder",info);
         }
         [HttpPost]
         public IActionResult SearchResult(List<Products> LIST)
@@ -44,31 +90,22 @@ namespace Bsef19a041_Project.Controllers
         [Route("Id")]
         public IActionResult AddToCart(/*[FromQuery] */int Id)
         {
-            //Products p=productRepo.GetProductById(Id);
+            int userId=userRepo.LoggedInUser();
             List<Products> product = new List<Products>();
-            string itemsList = "";
-            string info = "";
+            bool isAdded = false;
             Products p=productRepo.GetProduct(Id);
             ProductViewModel pViewModel = _mapper.Map<ProductViewModel>(p);
+            isAdded=orderRepo.AddFirstItemToCart(userId, Id.ToString());
 
-            if (HttpContext.Session.Keys.Contains("added_Items"))
+            if (isAdded)
             {
-                String addedItems = HttpContext.Session.GetString("added_Items");
-                //pViewModel = pViewModel.Remove(pViewModel.Length-4, 4);
-                info= pViewModel.ProductName+ " already added to the cart at \n"+addedItems;
+                return View("AddToCart",Id);
+
             }
             else
             {
-                itemsList = itemsList + ","+ Id;
-                product.Add(p);
-                int count = 1;
-                String c = System.Convert.ToString(count);
-                HttpContext.Session.SetString("added_Items", System.DateTime.Now.ToString());
-                HttpContext.Session.SetString("quantity", c);
-
+                return this.Ok($"Not addded");
             }
-            return View("AddToCart", info);
-
         }
     }
 }

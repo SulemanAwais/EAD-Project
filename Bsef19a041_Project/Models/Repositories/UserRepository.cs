@@ -1,10 +1,13 @@
 ﻿using Bsef19a041_Project.Models.Interface;
+using Bsef19a041_Project.Models.ViewModel;
 using Microsoft.Data.SqlClient;
 
 namespace Bsef19a041_Project.Models.Repositories
 {
     public class UserRepository : IUser
     {
+
+        public int UserID { get; set; }
         public List<User> GetAllUsers()
         {
             List<User> userList = new List<User>();
@@ -20,9 +23,10 @@ namespace Bsef19a041_Project.Models.Repositories
         {
             var db = new ApplicationDBContext();
             db.users.Add(u);
+            UserID=u.Id;
             db.SaveChanges();
             return "success";
-            
+
         }
 
         //string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MyShopDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
@@ -83,6 +87,7 @@ namespace Bsef19a041_Project.Models.Repositories
                 userData.FirstName=System.Convert.ToString(dr.GetValue(1));
                 userData.LastName=System.Convert.ToString(dr.GetValue(2));
                 userData.Id=System.Convert.ToInt32(dr.GetValue(0));
+                UserID=userData.Id;
                 connection.Close();
                 return (user, userData);
             }
@@ -92,6 +97,23 @@ namespace Bsef19a041_Project.Models.Repositories
                 return (null, null);
             }
 
+        }
+
+        public int LoggedInUser()
+        {
+            return this.UserID;
+        }
+
+        public bool AddItemToCart(int userID, int ProductID)
+        {
+            var db = new ApplicationDBContext();
+            var customers = db.users.Join(db.Product, cu => cu.Id,
+ p => p.Id, (cu, p) => new { cu, p })
+ .Select(c => new { prodId = c.p.Id, customername = c.cu.FirstName })
+ .OrderByDescending(c => c.prodId).Take(1);
+
+
+            return true;
         }
     }
 

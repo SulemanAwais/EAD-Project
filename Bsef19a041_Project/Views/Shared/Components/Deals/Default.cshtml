@@ -14,7 +14,7 @@
   <div class="card-body">
     <h5 class="card-title">@p.ImageName.Remove(p.ImageName.Length-4,4)</h5>
     <p class="card-text"> Price RS @p.Price</p>
-    <a type="button" class="btn btn-dark"id="b_@p.Id" asp-controller="Cart" asp-action="AddToCart" asp-route-Id="@p.Id" >Add To Cart </a>
+    <a type="button" class="btn btn-dark" asp-controller="Cart" asp-action="AddToCart" asp-route-Id="@p.Id" >Add To Cart </a>
     </div>
     </div>
         }

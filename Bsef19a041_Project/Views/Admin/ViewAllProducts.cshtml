@@ -34,8 +34,8 @@
                 <td> @P.ImageName.Remove(P.ImageName.Length-4,4)</td>
                 <td>@P.Price</td>
 
-                <td>  <a class="btn btn-light" asp-controller="Admin" asp-route-id="@P.Id" asp-action="EditProduct" type="button">Edit</a></td>
-                <td>  <a class="btn btn-danger" asp-controller="Admin" asp-route-id="@P.Id" asp-action="DeleteProduct" type="button">Delete</a></td>
+                <td>  <a class="btn btn-light" asp-controller="Admin"  asp-action="EditProduct" asp-route-Id="@P.Id" type="button">Edit</a></td>
+                <td>  <a class="btn btn-danger" asp-controller="Admin" asp-route-Id="@P.Id" asp-action="DeleteProduct" type="button">Delete</a></td>
 
             </tr>
         }

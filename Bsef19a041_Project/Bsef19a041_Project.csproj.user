@@ -7,6 +7,7 @@
     <View_SelectedScaffolderCategoryPath>root/Common/MVC/View</View_SelectedScaffolderCategoryPath>
     <WebStackScaffolding_ViewDialogWidth>650</WebStackScaffolding_ViewDialogWidth>
     <ActiveDebugProfile>Bsef19a041_Project</ActiveDebugProfile>
+    <NameOfLastUsedPublishProfile>E:\Pucit\6th Semester\Enterprise Application Development\Bsef19a041_Project\Bsef19a041_Project\Properties\PublishProfiles\FolderProfile.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

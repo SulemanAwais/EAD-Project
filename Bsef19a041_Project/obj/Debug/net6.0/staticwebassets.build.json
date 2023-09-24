@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OSd4Uxu+UNM50kfHztEVd7886161muUeHoaPceGuul0=",
+  "Hash": "rExy9d7/H8cGthaMDKdp+1TaUf6NM2plVUWdrHifgrY=",
   "Source": "Bsef19a041_Project",
   "BasePath": "_content/Bsef19a041_Project",
   "Mode": "Default",
@@ -253,6 +253,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\ChickenWrap.jpg"
+    },
+    {
+      "Identity": "E:\\Pucit\\6th Semester\\Enterprise Application Development\\Bsef19a041_Project\\Bsef19a041_Project\\wwwroot\\css\\download-removebg-preview.png",
+      "SourceId": "Bsef19a041_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Pucit\\6th Semester\\Enterprise Application Development\\Bsef19a041_Project\\Bsef19a041_Project\\wwwroot\\",
+      "BasePath": "_content/Bsef19a041_Project",
+      "RelativePath": "css/download-removebg-preview.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\download-removebg-preview.png"
     },
     {
       "Identity": "E:\\Pucit\\6th Semester\\Enterprise Application Development\\Bsef19a041_Project\\Bsef19a041_Project\\wwwroot\\css\\EggBuRger.jpg",
@@ -2004,6 +2021,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\logo.jpg"
+    },
+    {
+      "Identity": "E:\\Pucit\\6th Semester\\Enterprise Application Development\\Bsef19a041_Project\\Bsef19a041_Project\\wwwroot\\Uploads\\Orange and Yellow Music Event Flyer.jpg",
+      "SourceId": "Bsef19a041_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Pucit\\6th Semester\\Enterprise Application Development\\Bsef19a041_Project\\Bsef19a041_Project\\wwwroot\\",
+      "BasePath": "_content/Bsef19a041_Project",
+      "RelativePath": "Uploads/Orange and Yellow Music Event Flyer.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Orange and Yellow Music Event Flyer.jpg"
     },
     {
       "Identity": "E:\\Pucit\\6th Semester\\Enterprise Application Development\\Bsef19a041_Project\\Bsef19a041_Project\\wwwroot\\Uploads\\Picture2.png",

@@ -12,6 +12,9 @@ builder.Services.AddSession();
 
 builder.Services.AddSingleton<IProduct, ProductRepository>();
 builder.Services.AddSingleton<IUser,UserRepository>();
+builder.Services.AddSingleton<IAdmin, AdminRepository>();
+builder.Services.AddSingleton<IOrder, OrderRepository>();
+
 
 var app = builder.Build();
 

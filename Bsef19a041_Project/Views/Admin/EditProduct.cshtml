@@ -35,7 +35,7 @@
     border:1px solid orangered
 }
 </style>
-<form method="post" action="EditProduct" enctype="multipart/form-data">
+<form method="post" action="/Admin/EditProduct" enctype="multipart/form-data">
         <p>Select Product Image</p>
         <input type="file" name="PostedFiles"multiple />
         <input type="submit" value="Upload" />
@@ -43,14 +43,14 @@
             <br />
           @*<label for="exampleFormControlInput1" class="form-label">ID:</label>
           <input type="text" class="form-control" asp-for="Id" readonly id="exampleFormControlInput1" placeholder="">*@
-        </div><div class="mb-3">
+        @*</div><div class="mb-3">
           <label for="exampleFormControlInput1"  class="form-label">Image Name:</label>
           <input type="text" class="form-control" asp-for="ImageName" id="exampleFormControlInput1" placeholder="Gates">
         </div><div class="mb-3">
           <label for="exampleFormControlInput1"  class="form-label">Path:</label>
           <input type="text" class="form-control" asp-for="Path" id="exampleFormControlInput1" placeholder="name@example.com">
 
-        </div>
+        </div>*@
         <div class="mb-3">
           <label for="exampleFormControlInput1"  class="form-label">Price:</label>
           <input type="text" class="form-control" asp-for="Price" id="exampleFormControlInput1" placeholder="123456789">

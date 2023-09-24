@@ -3,21 +3,25 @@ using Bsef19a041_Project.Models;
 using System.IO;
 using System.Diagnostics;
 using Bsef19a041_Project.Models.Interface;
-using Bsef19a041_Project.Models.Repositories;
+using Bsef19a041_Project.Models.ViewModel;
+using AutoMapper;
 
 namespace Bsef19a041_Project.Controllers
 {
     public class RegisterController : Controller
     {
         private readonly IUser userRepo;
+        private readonly IMapper _mapper;
+
         //public static User LoggedInUser;
         private readonly ILogger<RegisterController> _logger;
         private readonly IWebHostEnvironment Environment;
-        public RegisterController(ILogger<RegisterController> logger, IWebHostEnvironment environment,IUser u/*, User loggedInUser*/)
+        public RegisterController(ILogger<RegisterController> logger, IWebHostEnvironment environment,IUser u,IMapper mapper/*, User loggedInUser*/)
         {
             _logger = logger;
             Environment = environment;
             userRepo=u;
+            _mapper=mapper;
             //LoggedInUser=loggedInUser;
             
         }
@@ -33,12 +37,6 @@ namespace Bsef19a041_Project.Controllers
         [HttpPost]
         public IActionResult Login([FromForm] userLogin uL)
         {
-            if (uL.Email == "admin@admin")
-            {
-                return RedirectToAction("Index", "Admin");
-            }
-            else
-            {
                 var data = userRepo.GetUserLogin(uL);
 
                 if (data.Item2!=null)
@@ -50,7 +48,6 @@ namespace Bsef19a041_Project.Controllers
                 {
                     return this.Ok($"Email or password Does Not Match");
                 }
-            }
             
         }
         [HttpPost]
@@ -95,6 +92,8 @@ namespace Bsef19a041_Project.Controllers
             {
                 //LoggedInUser=u;
                 userRepo.AddUser(u);
+                //UserProductViewModel pViewModel = _mapper.Map<UserProductViewModel>(u);
+
                 return View("Welcome", u);
             }
             else

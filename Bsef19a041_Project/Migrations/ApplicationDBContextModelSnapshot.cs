@@ -76,6 +76,13 @@ namespace Bsef19a041_Project.Migrations
                     b.Property<string>("Path")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ProductId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("contents");
@@ -95,6 +102,26 @@ namespace Bsef19a041_Project.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("discounts");
+                });
+
+            modelBuilder.Entity("Bsef19a041_Project.Models.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ProductId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("OrderTable");
                 });
 
             modelBuilder.Entity("Bsef19a041_Project.Models.Products", b =>

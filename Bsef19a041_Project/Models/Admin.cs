@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 namespace Bsef19a041_Project.Models
 {
-    public class Admin:Audit
+    public class Admin
     {
         [Key]
         public int Id { get; set; }
@@ -13,5 +13,6 @@ namespace Bsef19a041_Project.Models
         [Required(ErrorMessage = "Enter valid passowrd")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+
     }
 }
